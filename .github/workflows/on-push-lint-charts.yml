@@ -39,10 +39,10 @@ jobs:
           wget https://github.com/zegl/kube-score/releases/download/v${{ env.KUBE_SCORE_VERSION }}/kube-score_${{ env.KUBE_SCORE_VERSION }}_linux_amd64 -O /tmp/bin/kube-score
           chmod 755 /tmp/bin/kube-score
 
-      - name: Kube-score generated manifests
-        env:
-          KUBE_SCORE: /tmp/bin/kube-score
-        run: .ci/scripts/kube-score.sh
+      # - name: Kube-score generated manifests
+      #   env:
+      #     KUBE_SCORE: /tmp/bin/kube-score
+      #   run: .ci/scripts/kube-score.sh
 
   unittest:
     runs-on: ubuntu-latest

@@ -16,7 +16,7 @@ tests:
           of: Deployment
       - matchRegex:
           path: metadata.name
-          pattern: -docker-mailserver$
+          pattern: -dms-webapi-helm$
       - equal:
           path: spec.template.spec.containers[0].image
           value: bananas:in-pajamas

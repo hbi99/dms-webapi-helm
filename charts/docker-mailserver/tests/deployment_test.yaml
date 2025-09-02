@@ -1,0 +1,36 @@
+suite: deployment tests
+templates:
+  - deployment.yaml
+chart:
+  version: 0.1.0
+  appVersion: 0.1.0
+values:
+  - ../values.yaml
+tests:
+  - it: image and tag should end up in deployment
+    set:
+      image.name: bananas
+      image.tag: in-pajamas
+    asserts:
+      - isKind:
+          of: Deployment
+      - matchRegex:
+          path: metadata.name
+          pattern: -docker-mailserver$
+      - equal:
+          path: spec.template.spec.containers[0].image
+          value: bananas:in-pajamas
+
+  - it: should use subPath for volumes if defined
+    set:
+      persistence:
+        mail-data:
+          subPath: another-folder
+    asserts:
+      - equal:
+          path: spec.template.spec.containers[0].volumeMounts[?(@.name=="mail-data")].subPath
+          value: another-folder
+
+  - it: manifest should match snapshot
+    asserts:
+      - matchSnapshot: { }

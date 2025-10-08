@@ -37,6 +37,9 @@ spec:
   externalTrafficPolicy: Cluster
   {{- end }}
   {{- end }}
+  {{- if eq .Values.service.type "ExternalName" }}    
+  externalName: {{ default "mailserver" .Values.service.externalName }}
+  {{- end }}
   selector:
     app.kubernetes.io/name: {{ template "dockermailserver.fullname" . }}
     release: "{{ .Release.Name }}"

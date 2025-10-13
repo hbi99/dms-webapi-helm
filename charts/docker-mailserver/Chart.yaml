@@ -2,7 +2,7 @@ apiVersion: v2
 appVersion: "15.0.2"
 description: A fullstack but simple mailserver (smtp, imap, antispam, antivirus, ssl...) using Docker.
 name: dms-webapi-helm
-version: 4.2.4
+version: 5.0.0
 sources:
 - https://github.com/hbi99/dms-webapi-helm
 maintainers:

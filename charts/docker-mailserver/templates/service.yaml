@@ -138,8 +138,8 @@ spec:
       targetPort: managesieve
       port: 4190  
     {{- if .Values.proxyProtocol.enabled }}
-    - name: managesieve-proxy
-      targetPort: managesieve-proxy
+    - name: msieve-proxy
+      targetPort: msieve-proxy
       port: 14190
     {{- end }}   
   {{- end }}   
@@ -153,4 +153,7 @@ spec:
   type: {{ default "ClusterIP" .Values.service.type }}
   {{- if .Values.service.clusterIp }}
   clusterIP: {{ .Values.service.clusterIp }}
+  {{- end }}
+  {{- if .Values.service.trafficDistribution }}
+  trafficDistribution: {{ .Values.service.trafficDistribution }}
   {{- end }}

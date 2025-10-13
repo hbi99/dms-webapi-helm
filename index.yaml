@@ -6,6 +6,32 @@ entries:
         - Breaking : Standardized app labels to app.kubernetes.io/name for Istio workload/Cilium compatibility
     apiVersion: v2
     appVersion: 15.0.2
+    created: "2025-10-13T19:36:26.313812376Z"
+    description: A fullstack but simple mailserver (smtp, imap, antispam, antivirus,
+      ssl...) using Docker.
+    digest: 40824486e2ea6c313e6962ec6af53f6614bec0086a5ed80c63f100464ae9e275
+    home: https://github.com/hbi99/dms-webapi-helm
+    icon: https://avatars.githubusercontent.com/u/637727?s=48&v=4
+    keywords:
+    - mailserver
+    - postfix
+    - dovecot
+    - amavis
+    - imap
+    maintainers:
+    - email: hbi@longscript.com
+      name: hbi99
+    name: dms-webapi-helm
+    sources:
+    - https://github.com/hbi99/dms-webapi-helm
+    urls:
+    - https://github.com/hbi99/dms-webapi-helm/releases/download/dms-webapi-helm-5.0.0/dms-webapi-helm-5.0.0.tgz
+    version: 5.0.0
+  - annotations:
+      artifacthub.io/changes: |
+        - Breaking : Standardized app labels to app.kubernetes.io/name for Istio workload/Cilium compatibility
+    apiVersion: v2
+    appVersion: 15.0.2
     created: "2025-10-08T21:32:05.700193171Z"
     description: A fullstack but simple mailserver (smtp, imap, antispam, antivirus,
       ssl...) using Docker.
@@ -53,4 +79,4 @@ entries:
     urls:
     - https://github.com/hbi99/dms-webapi-helm/releases/download/dms-webapi-helm-4.2.3/dms-webapi-helm-4.2.3.tgz
     version: 4.2.3
-generated: "2025-10-08T21:32:05.700201036Z"
+generated: "2025-10-13T19:36:26.313825581Z"

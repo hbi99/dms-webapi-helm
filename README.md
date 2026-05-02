@@ -5,3 +5,7 @@ This repostitory contains a helm chart to deploy [docker-mailserver](https://git
 ## Documentation
 
 Documentation is in the chart's [README.md](charts/docker-mailserver/README.md).
+
+This repository is a derivate of:
+[docker-mailserver-helm](https://github.com/docker-mailserver/docker-mailserver-helm)
+...and adapted for additional functionality.
